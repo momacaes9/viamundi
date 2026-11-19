@@ -1,6 +1,6 @@
 -- is_editor() runs with search_path = '' so the citext "=" operator (schema extensions) is not
 -- found and the comparison silently fell back to case-sensitive text equality.
--- Compare lower-cased text explicitly so 'MomaCaes@UNC.edu' matches 'momacaes@unc.edu'.
+-- Compare lower-cased text explicitly so 'Ana@Example.com' matches 'ana@example.com'.
 create or replace function public.is_editor()
 returns boolean
 language sql stable security definer
