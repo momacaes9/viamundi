@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Viamundi: O Caminho para o Extraordinário</title>
+<meta name="description" content="Mentoria estratégica de admissões internacionais para estudantes que buscam as melhores universidades dos EUA e Europa." />
+<meta property="og:title" content="Viamundi: O Caminho para o Extraordinário" />
+<meta property="og:description" content="Mentoria estratégica de admissões internacionais para estudantes que buscam as melhores universidades dos EUA e Europa." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="/img/globo.jpg" />
+<link rel="icon" type="image/png" href="/img/viamundi-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" />
+</head>
+<body>
+<style>
+/* ══════════ RESPONSIVE POLISH (mobile / tablet / desktop) ══════════ */
+
+/* Prevent any element from overflowing viewport width */
+img, svg, video { max-width: 100%; height: auto; }
+
+/* ─── TABLET (≤1024px) ─── */
+@media (max-width: 1024px) {
+  nav { padding: 0.85rem 4vw; top: 30px; }
+  .logo-badge { width: 76px; height: 76px; }
+  .logo-name { font-size: 1.5rem; letter-spacing: 0.2em; }
+  .logo-tag { font-size: 0.54rem; }
+  .nav-links { gap: 1rem; }
+  .nav-links a { font-size: 0.68rem; }
+
+  #hero { padding: 11rem 5vw 5rem; }
+  .promessa-text { padding: 4.5rem 5vw; }
+  .promessa-globe img.globe-photo { width: min(540px, 105%); }
+
+  .mth-grid { grid-template-columns: repeat(2, 1fr); }
+  .stat-grid { gap: 0.8rem; }
+}
+
+/* ─── MOBILE / SMALL TABLET (≤860px) ─── */
+@media (max-width: 860px) {
+  .lang-bar { padding: 0.32rem 4vw; }
+  .lang-btn { font-size: 0.66rem; padding: 0.22rem 0.6rem; letter-spacing: 0.12em; }
+
+  nav { padding: 0.8rem 4vw; top: 28px; }
+  .logo-badge { width: 64px; height: 64px; }
+  .logo-name { font-size: 1.3rem; letter-spacing: 0.18em; }
+  .logo-tag { font-size: 0.5rem; letter-spacing: 0.2em; }
+
+  #hero { padding: 10.5rem 5vw 4.5rem; min-height: auto; }
+  .hero-h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-tagline { font-size: 1.05rem; }
+  .hero-sub { font-size: 0.92rem; margin-bottom: 2.2rem; }
+  .hero-btns { gap: 0.7rem; }
+  .btn-gold, .btn-outline, .btn-sky { padding: 0.8rem 1.5rem; font-size: 0.7rem; }
+  .hero-scroll { display: none; }
+
+  #team, #admissions, #problem, #services, #why, #method, #cta {
+    padding-top: 4.5rem; padding-bottom: 4.5rem;
+  }
+  .section-head { margin-bottom: 2.5rem; }
+
+  .sol-box { padding: 1.8rem 1.4rem; }
+  .sol-title { font-size: 1.3rem; }
+
+  .stat-grid { grid-template-columns: 1fr 1fr; }
+  .stat-box { padding: 1.3rem 1rem; }
+  .stat-n { font-size: 1.9rem; }
+
+  .adm-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .srv-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+  .scard { padding: 1.7rem 1.5rem; }
+
+  .mstep { padding: 1.6rem 1.2rem; }
+
+  .cta-h2 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+  .cta-btns { flex-direction: column; align-items: center; }
+  .cta-btns .btn-gold, .cta-btns .btn-outline { width: 100%; max-width: 320px; text-align: center; }
+
+  .promessa-text { padding: 3.5rem 6vw 2rem; }
+  .promessa-globe { min-height: 360px; padding: 1.5rem; }
+  .promessa-globe img.globe-photo { width: min(460px, 95%); }
+  .promessa-h { font-size: clamp(1.4rem, 5.5vw, 2rem); }
+}
+
+/* ─── SMALL MOBILE (≤560px) ─── */
+@media (max-width: 560px) {
+  .lang-bar { justify-content: center; padding: 0.3rem 4vw; }
+  nav { padding: 0.7rem 4vw; top: 28px; }
+  .logo-badge { width: 54px; height: 54px; }
+  .logo-name { font-size: 1.15rem; letter-spacing: 0.16em; }
+  .logo-tag { display: none; }
+  .logo-wrap { gap: 0.75rem; }
+  .nav-links { top: 104px; }
+
+  #hero { padding: 9.5rem 5vw 3.5rem; }
+  .hero-eyebrow { font-size: 0.62rem; letter-spacing: 0.25em; }
+  .hero-h1 { font-size: clamp(1.9rem, 8.5vw, 2.4rem); }
+  .hero-tagline { font-size: 0.95rem; margin-bottom: 1.3rem; }
+  .hero-sub { font-size: 0.88rem; line-height: 1.75; }
+  .hero-btns { flex-direction: column; width: 100%; align-items: stretch; }
+  .hero-btns .btn-gold, .hero-btns .btn-outline { width: 100%; text-align: center; }
+
+  .h2 { font-size: clamp(1.6rem, 6.5vw, 2.2rem); }
+  .eyebrow { font-size: 0.6rem; letter-spacing: 0.24em; }
+
+  .tcard-body { padding: 1.4rem 1.3rem 1.6rem; }
+  .tcard-info { padding: 1.2rem 1.2rem; }
+
+  #admissions, #services, #method, #why, #problem, #team, #cta {
+    padding-left: 5vw; padding-right: 5vw;
+  }
+  .adm-grid { grid-template-columns: 1fr; }
+  .stat-grid { grid-template-columns: 1fr; }
+
+  .promessa-text { padding: 3rem 6vw 1.5rem; }
+  .promessa-globe { min-height: 300px; }
+  .promessa-globe img.globe-photo { width: min(360px, 92%); }
+  .promessa-pillars span { font-size: 0.82rem; }
+
+  footer { padding: 2.5rem 5vw 1.5rem; }
+  .foot-name { font-size: 1.15rem; }
+  .foot-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ─── VERY SMALL (≤380px) ─── */
+@media (max-width: 380px) {
+  .logo-badge { width: 50px; height: 50px; }
+  .logo-name { font-size: 1.05rem; }
+  .nav-links { top: 99px; }
+  .hero-h1 { font-size: 1.75rem; }
+  .btn-gold, .btn-outline { font-size: 0.66rem; padding: 0.75rem 1.2rem; }
+}
+</style>
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-pt" data-set-lang="pt">🇧🇷 PT</button>
+  <button class="lang-btn"        id="btn-en" data-set-lang="en">🇺🇸 EN</button>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="logo-wrap">
+    <span class="logo-badge">
+      <img class="logo-img" src="/img/viamundi-logo.png" alt="Viamundi"/>
+    </span>
+    <div class="logo-text">
+      <span class="logo-name">VIAMUNDI</span>
+      <span class="logo-tag" data-lang="pt">O Caminho para o Extraordinário</span>
+      <span class="logo-tag" data-lang="en">The Path to the Extraordinary</span>
+    </div>
+  </a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#team"      data-lang="pt">A Equipe</a>    <a href="#team"      data-lang="en">The Team</a></li>
+    <li><a href="#promessa" data-lang="pt">Sobre</a><a href="#promessa" data-lang="en">About</a></li>
+    <li><a href="#admissions" data-lang="pt">Aprovações</a>  <a href="#admissions" data-lang="en">Admissions</a></li>
+    <li><a href="#services"  data-lang="pt">Serviços</a>    <a href="#services"  data-lang="en">Services</a></li>
+    <li><a href="#method"    data-lang="pt">Metodologia</a> <a href="#method"    data-lang="en">Method</a></li>
+    <li><a href="#faq"       data-lang="pt">Perguntas</a>   <a href="#faq"       data-lang="en">FAQ</a></li>
+    <li><a href="/blog" data-lang="pt">Blog</a><a href="/blog" data-lang="en">Blog</a></li>
+    <li><a href="/contato" data-lang="pt">Contato</a><a href="/contato" data-lang="en">Contact</a></li>
+    <li><a href="/oportunidades" data-lang="pt">Oportunidades</a><a href="/oportunidades" data-lang="en">Opportunities</a></li>
+    <li>
+      <a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" class="nav-cta" data-lang="pt">Agendar Conversa</a>
+      <a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" class="nav-cta" data-lang="en">Book a Call</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section id="hero">
+  <div class="hero-topo"></div>
+  <div class="hero-glow"></div>
+
+  <p class="hero-eyebrow" data-lang="pt">Mentoria Personalizada de Admissões Internacionais</p>
+  <p class="hero-eyebrow" data-lang="en">Personalized International Admissions Mentoring</p>
+
+  <h1 class="hero-h1">
+    <span data-lang="pt">Encontre Seu Caminho<br>para as <em>Melhores Universidades do Mundo.</em></span>
+    <span data-lang="en">Find Your Path<br>to the <em>World's Best Universities.</em></span>
+  </h1>
+
+  <p class="hero-tagline" data-lang="pt">Find Your Path. Shape Your Future.</p>
+  <p class="hero-tagline" data-lang="en">Find Your Path. Shape Your Future.</p>
+
+  <p class="hero-sub">
+    <span data-lang="pt">Um sistema de orientação estratégica para estudantes que querem entrar nas melhores universidades dos Estados Unidos e Europa, construído por quem viveu essa jornada.</span>
+    <span data-lang="en">A strategic guidance system for students aiming at top universities in the United States and Europe, built by someone who lived this journey.</span>
+  </p>
+
+  <div class="hero-btns">
+    <a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" class="btn-gold" data-lang="pt">Agende Sua Chamada Estratégica</a>
+    <a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" class="btn-gold" data-lang="en">Book Your Strategy Call</a>
+    <a href="#services" class="btn-outline" data-lang="pt">Explorar Serviços</a>
+    <a href="#services" class="btn-outline" data-lang="en">Explore Services</a>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span data-lang="pt">rolar</span><span data-lang="en">scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════════════ TEAM ═══════════════════ -->
+<section id="team">
+  <div class="section-head rv">
+    <span class="eyebrow light" data-lang="pt">Quem Somos</span>
+    <span class="eyebrow light" data-lang="en">Who We Are</span>
+    <h2 class="h2 light">
+      <span data-lang="pt">Sua Equipe de <em>Mentoras</em></span>
+      <span data-lang="en">Your <em>Mentoring</em> Team</span>
+    </h2>
+  </div>
+
+  <div class="team-grid">
+
+    <!-- JÚLIA -->
+    <div class="tcard rv">
+      <div class="tcard-top">
+        <img src="/img/photo-1.jpg" loading="lazy" decoding="async" alt="Júlia Pasa Tomasi" class="tcard-photo"/>
+        <div class="tcard-info">
+          <p class="tcard-name">Júlia Pasa Tomasi</p>
+          <p class="tcard-aka">Júlia Pelo Mundo</p>
+          <p class="tcard-role" data-lang="pt">Fundadora &amp; Mentora de Admissões</p>
+          <p class="tcard-role" data-lang="en">Founder &amp; Admissions Mentor</p>
+        </div>
+      </div>
+      <div class="tcard-body">
+        <p class="tcard-bio">
+          <span data-lang="pt">Realizou duas voltas ao mundo percorrendo mais de 100 países e 6 continentes. Estudou por dois anos em três escolas diferentes nos Estados Unidos, formando-se em uma escola americana. Criou um canal no YouTube sobre viagens que alcançou mais de 40 mil pessoas, ajudando mais de 900 a planejarem seus custos e roteiros. Co-autora de um livro de viagens best-seller no Brasil, com mais de 2.000 cópias vendidas na América Latina e Europa.</span>
+          <span data-lang="en">Completed two trips around the world across 100+ countries and 6 continents. Studied for two years at three different schools in the United States, graduating from an American school. Created a YouTube travel channel reaching over 40,000 people, helping 900+ plan their travel budgets. Co-author of a travel bestseller with 2,000+ copies sold across Latin America and Europe.</span>
+        </p>
+        <div class="tags">
+          <span class="tag">100+ Países</span>
+          <span class="tag">6 Continentes</span>
+          <span class="tag" data-lang="pt">Escola Americana</span>
+          <span class="tag" data-lang="en">American School</span>
+          <span class="tag">Best-seller</span>
+          <span class="tag">40K+ YouTube</span>
+        </div>
+        <div class="social-row">
+          <a href="https://www.instagram.com/viamundieducation/" target="_blank" rel="noopener" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            <span data-lang="pt">Siga no Instagram</span><span data-lang="en">Follow on Instagram</span>
+          </a>
+          <a href="https://www.youtube.com/@viamundieducation" target="_blank" rel="noopener" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"/></svg>
+            <span data-lang="pt">YouTube</span><span data-lang="en">YouTube</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MÔNICA -->
+    <div class="tcard rv d1">
+      <div class="tcard-top">
+        <img src="/img/photo-2.jpg" loading="lazy" decoding="async" alt="Mônica Macaes" class="tcard-photo monica-photo"/>
+        <div class="tcard-info">
+          <p class="tcard-name">Mônica Macaes</p>
+          <p class="tcard-role" data-lang="pt">Co-fundadora · Pesquisadora &amp; Especialista em SAT</p>
+          <p class="tcard-role" data-lang="en">Co-founder · Researcher &amp; SAT Specialist</p>
+        </div>
+      </div>
+      <div class="tcard-body">
+        <p class="tcard-bio">
+          <span data-lang="pt">Pesquisadora premiada internacionalmente com publicação na The Curieux Review e 2º lugar na FenaDANTE. Criou o OSDA, plataforma de IA para pegada de carbono, Finalista Global no Pitch for the Future e 1º lugar no UN SDGs Showcase da ESPM. Desenvolveu bioplástico de batata-doce em parceria com a USP. Finalista no Global Youth Challenge, indicada ao Paul Pu Award (Univ. Toronto) e verão em Johns Hopkins. Professora de SAT na plataforma global Schoolhouse.</span>
+          <span data-lang="en">Internationally awarded researcher published in The Curieux Review and 2nd at FenaDANTE Science Fair. Founded OSDA, an AI carbon footprint platform, Pitch for the Future Global Finalist and #1 at ESPM's UN SDGs Showcase. Developed sweet potato bioplastic with USP. Global Youth Challenge Finalist, nominated for U. of Toronto's Paul Pu Award, and summer at Johns Hopkins. SAT teacher on the global Schoolhouse platform.</span>
+        </p>
+        <div class="tags">
+          <span class="tag">SAT Expert</span>
+          <span class="tag">Schoolhouse</span>
+          <span class="tag" data-lang="pt">Publicação Científica</span>
+          <span class="tag" data-lang="en">Published Researcher</span>
+          <span class="tag">UN SDGs</span>
+          <span class="tag">Johns Hopkins</span>
+          <span class="tag">USP</span>
+        </div>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/monicamacaes/" target="_blank" rel="noopener" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ PROMESSA VIAMUNDI ═══════════════════ -->
+<section id="promessa">
+<div class="promessa-grid">
+
+  <!-- LEFT: Text -->
+  <div class="promessa-text">
+    <p class="promessa-eyebrow" data-lang="pt">Promessa Viamundi</p>
+    <p class="promessa-eyebrow" data-lang="en">The Viamundi Promise</p>
+    <div class="promessa-rule"></div>
+    <h2 class="promessa-h">
+      <span data-lang="pt">Não é só sobre <em>chegar lá.</em><br/>É sobre quem você <em>se torna</em> pelo caminho.</span>
+      <span data-lang="en">It's not just about <em>getting there.</em><br/>It's about who you <em>become</em> along the way.</span>
+    </h2>
+
+    <ul class="promessa-pillars">
+      <li><span class="pp-dot"></span><div data-lang="pt"><b>Descubra</b><span>seu potencial</span></div><div data-lang="en"><b>Discover</b><span>your potential</span></div></li>
+      <li><span class="pp-dot"></span><div data-lang="pt"><b>Escolha</b><span>seu caminho</span></div><div data-lang="en"><b>Choose</b><span>your path</span></div></li>
+      <li><span class="pp-dot"></span><div data-lang="pt"><b>Viva</b><span>experiências que transformam</span></div><div data-lang="en"><b>Live</b><span>transformative experiences</span></div></li>
+      <li><span class="pp-dot filled"></span><div data-lang="pt"><b>Impacte</b><span>o mundo</span></div><div data-lang="en"><b>Impact</b><span>the world</span></div></li>
+    </ul>
+
+    <p class="promessa-sig" data-lang="pt">Nós guiamos. Você <em>transforma.</em></p>
+    <p class="promessa-sig" data-lang="en">We guide. You <em>transform.</em></p>
+  </div>
+
+  <!-- RIGHT: Globe illustration -->
+  <div class="promessa-globe">
+    <img class="globe-photo" src="/img/globo.jpg" alt="Globo Viamundi conectando o mundo"/>
+  </div>
+
+</div>
+</section>
+
+
+<!-- ═══════════════════ ADMISSIONS ═══════════════════ -->
+<section id="admissions">
+  <div class="adm-wrap">
+    <div class="rv">
+      <span class="eyebrow" data-lang="pt">Resultados Reais</span>
+      <span class="eyebrow" data-lang="en">Real Results</span>
+      <h2 class="h2">
+        <span data-lang="pt">Aprovações das <em>Nossas Mentoras</em></span>
+        <span data-lang="en">Our Mentors' <em>University Admissions</em></span>
+      </h2>
+      <p class="adm-intro" data-lang="pt">As aprovações abaixo refletem as admissões reais das nossas próprias mentoras, prova de que sabemos, por experiência própria, como navegar esse processo com sucesso.</p>
+      <p class="adm-intro" data-lang="en">The admissions below reflect our mentors' own university acceptances, proof that we know, from personal experience, how to navigate this process successfully.</p>
+    </div>
+
+    <div class="adm-block rv">
+      <p class="adm-label" data-lang="pt">Aprovações de Júlia Pasa Tomasi</p>
+      <p class="adm-label" data-lang="en">Júlia Pasa Tomasi's Admissions</p>
+      <div class="adm-grid">
+        <div class="acard"><p class="acard-uni">University of Connecticut</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award">Global Distinction Scholarship</p><p class="acard-value" data-lang="pt">USD $10,000/ano · $40,000 total</p><p class="acard-value" data-lang="en">USD $10,000/year · $40,000 total</p></div>
+        <div class="acard"><p class="acard-uni">Miami University</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">RedHawk Excellence Scholarship + admissão direta ao Honors College</p><p class="acard-award" data-lang="en">RedHawk Excellence Scholarship + direct admission to Honors College</p><p class="acard-value" data-lang="pt">USD $21,130/ano · $84,520 total</p><p class="acard-value" data-lang="en">USD $21,130/year · $84,520 total</p></div>
+        <div class="acard"><p class="acard-uni">University of Rhode Island</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Presidential Scholarship + admissão direta ao Honors Program</p><p class="acard-award" data-lang="en">Presidential Scholarship + direct admission to Honors Program</p><p class="acard-value" data-lang="pt">USD $17,000/ano · $68,000 total</p><p class="acard-value" data-lang="en">USD $17,000/year · $68,000 total</p></div>
+        <div class="acard"><p class="acard-uni">Louisiana State University</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">Stetson University</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">UNC Asheville</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">50% desconto na moradia + bolsa acadêmica</p><p class="acard-award" data-lang="en">50% housing discount + academic scholarship</p><p class="acard-value" data-lang="pt">USD $8,000/ano · $32,000 total</p><p class="acard-value" data-lang="en">USD $8,000/year · $32,000 total</p></div>
+      </div>
+    </div>
+
+    <div class="adm-block rv">
+      <p class="adm-label" data-lang="pt">Aprovações de Mônica Macaes</p>
+      <p class="adm-label" data-lang="en">Mônica Macaes' Admissions</p>
+      <div class="adm-grid">
+        <div class="acard"><p class="acard-uni">University of North Carolina at Chapel Hill</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">University of Minnesota Twin Cities</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">UIUC, Univ. of Illinois Urbana-Champaign</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">Case Western Reserve University</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">University of Melbourne</p><p class="acard-country" data-lang="pt">🇦🇺 Austrália</p><p class="acard-country" data-lang="en">🇦🇺 Australia</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">University of British Columbia</p><p class="acard-country" data-lang="pt">🇨🇦 Canadá</p><p class="acard-country" data-lang="en">🇨🇦 Canada</p><p class="acard-award" data-lang="pt">Bolsa UBC Outstanding International Student</p><p class="acard-award" data-lang="en">UBC Outstanding International Student Award</p><p class="acard-value">CAD $10,000</p></div>
+        <div class="acard"><p class="acard-uni">University of Toronto</p><p class="acard-country" data-lang="pt">🇨🇦 Canadá</p><p class="acard-country" data-lang="en">🇨🇦 Canada</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">University of Delaware</p><p class="acard-country" data-lang="pt">🇺🇸 Estados Unidos</p><p class="acard-country" data-lang="en">🇺🇸 United States</p><p class="acard-award">1743 Distinguished Scholar + Honors</p><p class="acard-value" data-lang="pt">USD $104,000 em bolsas</p><p class="acard-value" data-lang="en">USD $104,000 in scholarships</p></div>
+        <div class="acard"><p class="acard-uni">Universidade do Porto</p><p class="acard-country" data-lang="pt">🇵🇹 Portugal</p><p class="acard-country" data-lang="en">🇵🇹 Portugal</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">FGV, Fundação Getulio Vargas</p><p class="acard-country" data-lang="pt">🇧🇷 Brasil</p><p class="acard-country" data-lang="en">🇧🇷 Brazil</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+        <div class="acard"><p class="acard-uni">Mackenzie Presbyterian University</p><p class="acard-country" data-lang="pt">🇧🇷 Brasil</p><p class="acard-country" data-lang="en">🇧🇷 Brazil</p><p class="acard-award" data-lang="pt">Admissão confirmada</p><p class="acard-award" data-lang="en">Admitted</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROBLEM / SOLUTION ═══════════════════ -->
+<section id="problem">
+  <div class="ps-wrap">
+    <div class="rv">
+      <span class="eyebrow light" data-lang="pt">O Desafio</span>
+      <span class="eyebrow light" data-lang="en">The Challenge</span>
+      <h2 class="h2 light">
+        <span data-lang="pt">Por Que Tantos Estudantes Não Chegam às <em>Universidades que Merecem?</em></span>
+        <span data-lang="en">Why Do So Many Students Miss the <em>Universities They Deserve?</em></span>
+      </h2>
+      <p class="ps-desc" data-lang="pt">As melhores universidades do mundo não buscam apenas boas notas. Elas selecionam histórias extraordinárias, perspectiva global e caráter intencional. A maioria dos estudantes não tem um roteiro para isso.</p>
+      <p class="ps-desc" data-lang="en">The world's top universities don't just look for good grades. They select for extraordinary stories, global perspective, and intentional character. Most students have no roadmap for this.</p>
+      <ul class="ps-list">
+        <li><span data-lang="pt">O sistema valoriza narrativa, não apenas conquistas, e a maioria não sabe como construir uma.</span><span data-lang="en">The system rewards narrative, not just achievement, and most students don't know how to build one.</span></li>
+        <li><span data-lang="pt">Estudantes internacionais enfrentam desvantagens invisíveis que orientadores genéricos raramente abordam.</span><span data-lang="en">International applicants face invisible disadvantages that standard counselors rarely address.</span></li>
+        <li><span data-lang="pt">Consultorias genéricas ignoram quem você é, e as melhores universidades aprovam quem você é, não seu currículo.</span><span data-lang="en">Generic consulting ignores who you are, and top schools admit who you are, not your resume.</span></li>
+      </ul>
+    </div>
+    <div class="sol-box rv d2">
+      <h3 class="sol-title" data-lang="pt">Uma Orientação Diferente</h3>
+      <h3 class="sol-title" data-lang="en">A Different Kind of Guidance</h3>
+      <p data-lang="pt">A Viamundi nasceu porque a consultoria padrão falha com os estudantes que mais precisam, aqueles com trajetórias não convencionais, contextos internacionais e potencial extraordinário.</p>
+      <p data-lang="en">Viamundi was built because standard consulting fails the students who need it most, those with unconventional paths, international backgrounds, and extraordinary potential.</p>
+      <p style="margin-top:.8rem" data-lang="pt">Não encaixamos sua história em um template. Construímos a estratégia ao redor de quem você já é, e de quem está se tornando.</p>
+      <p style="margin-top:.8rem" data-lang="en">We don't fit your story into a template. We build the strategy around who you already are, and who you're becoming.</p>
+      <p class="sol-quote" data-lang="pt">"Não é só sobre chegar lá. É sobre quem você se torna pelo caminho."</p>
+      <p class="sol-quote" data-lang="en">"It's not just about getting there. It's about who you become along the way."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section id="services">
+  <div class="srv-wrap">
+    <div class="srv-head rv">
+      <span class="eyebrow" data-lang="pt">O Que Fazemos</span>
+      <span class="eyebrow" data-lang="en">What We Do</span>
+      <h2 class="h2">
+        <span data-lang="pt">Estratégia e Execução <em>Completas</em></span>
+        <span data-lang="en">End-to-End Strategy <em>&amp; Execution</em></span>
+      </h2>
+      <p data-lang="pt">Cada pilar do nosso programa é projetado para construir uma candidatura completa e convincente.</p>
+      <p data-lang="en">Each pillar of our program is designed to build a complete, compelling candidacy.</p>
+    </div>
+    <div class="srv-grid">
+      <div class="scard rv">
+        <div class="scard-num">01</div>
+        <h3 class="scard-name" data-lang="pt">Estratégia e Planejamento</h3>
+        <h3 class="scard-name" data-lang="en">Strategy &amp; Planning</h3>
+        <p class="scard-desc" data-lang="pt">Avaliação completa do seu perfil académico, interesses e objetivos, seguida de um roteiro estratégico personalizado para suas universidades-alvo.</p>
+        <p class="scard-desc" data-lang="en">Full assessment of your academic profile, interests, and goals, followed by a personalized strategic roadmap toward your target universities.</p>
+        <p class="scard-impact" data-lang="pt">↗ Maximiza o alinhamento entre perfil e fit institucional</p>
+        <p class="scard-impact" data-lang="en">↗ Maximizes match between profile and institutional fit</p>
+      </div>
+      <div class="scard rv d1">
+        <div class="scard-num">02</div>
+        <h3 class="scard-name" data-lang="pt">Desenvolvimento Extracurricular</h3>
+        <h3 class="scard-name" data-lang="en">Extracurricular Development</h3>
+        <p class="scard-desc" data-lang="pt">Iniciativas de alto impacto, projetos de pesquisa, liderança e experiências capstone, que contam uma história coerente sobre quem você é além da sala de aula.</p>
+        <p class="scard-desc" data-lang="en">High-impact initiatives, research projects, leadership programs, and capstone experiences, that tell a coherent story of who you are beyond the classroom.</p>
+        <p class="scard-impact" data-lang="pt">↗ Constrói profundidade, não apenas variedade de atividades</p>
+        <p class="scard-impact" data-lang="en">↗ Builds depth, not just breadth of activity</p>
+      </div>
+      <div class="scard rv d2">
+        <div class="scard-num">03</div>
+        <h3 class="scard-name" data-lang="pt">Redação de Essays e Narrativa</h3>
+        <h3 class="scard-name" data-lang="en">Essay &amp; Personal Narrative</h3>
+        <p class="scard-desc" data-lang="pt">Encontramos as experiências, valores e perspectivas que te tornam único, e transformamos isso em essays que impactam os avaliadores das universidades.</p>
+        <p class="scard-desc" data-lang="en">We uncover the experiences, values, and perspectives that make you singular, transforming them into essays that genuinely move admissions officers.</p>
+        <p class="scard-impact" data-lang="pt">↗ Transforma sua voz em vantagem competitiva decisiva</p>
+        <p class="scard-impact" data-lang="en">↗ Transforms your voice into decisive competitive advantage</p>
+      </div>
+      <div class="scard rv">
+        <div class="scard-num">04</div>
+        <h3 class="scard-name" data-lang="pt">Preparação para o SAT</h3>
+        <h3 class="scard-name" data-lang="en">SAT Preparation</h3>
+        <p class="scard-desc" data-lang="pt">Mônica Macaes é professora de SAT com experiência em escolas e na plataforma Schoolhouse, ensinando Reading, Writing e Math com rigor e resultados comprovados.</p>
+        <p class="scard-desc" data-lang="en">Mônica Macaes is a SAT teacher with experience at schools and on the Schoolhouse platform, teaching Reading, Writing, and Math with rigor and proven results.</p>
+        <p class="scard-impact" data-lang="pt">↗ Alinha performance acadêmica às expectativas institucionais</p>
+        <p class="scard-impact" data-lang="en">↗ Aligns academic performance to institutional expectations</p>
+        <p class="scard-note" data-lang="pt">Ensinado por Mônica Macaes, professora no Schoolhouse</p>
+        <p class="scard-note" data-lang="en">Taught by Mônica Macaes, Schoolhouse instructor</p>
+      </div>
+      <div class="scard rv d1">
+        <div class="scard-num">05</div>
+        <h3 class="scard-name" data-lang="pt">Seleção de Universidades</h3>
+        <h3 class="scard-name" data-lang="en">University List Architecture</h3>
+        <p class="scard-desc" data-lang="pt">Uma lista cuidadosamente equilibrada, analisando cultura institucional, bolsas disponíveis, programas acadêmicos e probabilidades de admissão para que cada escola seja a certa para você.</p>
+        <p class="scard-desc" data-lang="en">A carefully balanced list, analyzing institutional culture, financial aid, academic programs, and admission probabilities to ensure every school is right for you.</p>
+        <p class="scard-impact" data-lang="pt">↗ Targeting preciso em EUA e Europa</p>
+        <p class="scard-impact" data-lang="en">↗ Precision targeting across US and European institutions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ WHY VIAMUNDI ═══════════════════ -->
+<section id="why">
+  <div class="why-wrap">
+    <div class="rv">
+      <span class="eyebrow light" data-lang="pt">Por Que a Viamundi</span>
+      <span class="eyebrow light" data-lang="en">Why Viamundi</span>
+      <h2 class="h2 light">
+        <span data-lang="pt">Construída por Quem <em>Viveu</em> o Caminho</span>
+        <span data-lang="en">Built by Those Who <em>Lived</em> the Path</span>
+      </h2>
+      <ul class="why-points">
+        <li class="why-pt"><span class="why-num">I.</span><div><h4 data-lang="pt">Experiência Internacional</h4><h4 data-lang="en">International Experience</h4><p data-lang="pt">Nossa fundadora percorreu mais de 100 países e 6 continentes, estudou em escolas americanas e conquistou múltiplas admissões nos EUA. Não como observadora, mas como estudante que construiu seu próprio caminho.</p><p data-lang="en">Our founder traveled across more than 100 countries and 6 continents, studied at American schools, and earned multiple US admissions. Not as an observer, but as a student who built her own path.</p></div></li>
+        <li class="why-pt"><span class="why-num">II.</span><div><h4 data-lang="pt">Identidade Primeiro, Não Checklist</h4><h4 data-lang="en">Identity First, Not a Checklist</h4><p data-lang="pt">As aplicações mais poderosas começam com uma compreensão profunda de si mesmo. Nosso processo descobre quem você é antes de prescrever o que fazer, tornando cada elemento autêntico e coerente.</p><p data-lang="en">The most powerful applications begin with a deep understanding of who you are. Our process uncovers your identity before prescribing actions, making every element authentic and coherent.</p></div></li>
+        <li class="why-pt"><span class="why-num">III.</span><div><h4 data-lang="pt">Pesquisa e Inovação no DNA da Equipe</h4><h4 data-lang="en">Research &amp; Innovation in Our DNA</h4><p data-lang="pt">Mônica é pesquisadora publicada, finalista global em competições de inovação e premiada pela ONU, o que nos dá uma perspectiva única para desenvolver projetos e perfis de alto impacto.</p><p data-lang="en">Mônica is a published researcher, global innovation finalist, and UN-awarded, giving us a unique perspective to build high-impact projects and profiles.</p></div></li>
+        <li class="why-pt"><span class="why-num">IV.</span><div><h4 data-lang="pt">Perspectiva Global, Precisão Local</h4><h4 data-lang="en">Global Perspective, Local Precision</h4><p data-lang="pt">Entendemos como histórias internacionais são percebidas pelas comissões de admissão dos EUA e Europa, e como posicioná-las como ativos extraordinários, não obstáculos.</p><p data-lang="en">We understand how international stories are perceived by US and European admissions committees, and how to position them as extraordinary assets, not obstacles.</p></div></li>
+      </ul>
+    </div>
+    <div class="stat-grid rv d2">
+      <div class="stat-box"><p class="stat-n">100+</p><p class="stat-l" data-lang="pt">Países Visitados</p><p class="stat-l" data-lang="en">Countries Visited</p></div>
+      <div class="stat-box"><p class="stat-n">6</p><p class="stat-l" data-lang="pt">Continentes</p><p class="stat-l" data-lang="en">Continents</p></div>
+      <div class="stat-box"><p class="stat-n">2×</p><p class="stat-l" data-lang="pt">Voltas ao Mundo</p><p class="stat-l" data-lang="en">World Trips</p></div>
+      <div class="stat-box"><p class="stat-n">40K+</p><p class="stat-l" data-lang="pt">Pessoas Impactadas</p><p class="stat-l" data-lang="en">People Reached</p></div>
+      <div class="stat-box"><p class="stat-n">2K+</p><p class="stat-l" data-lang="pt">Cópias do Livro</p><p class="stat-l" data-lang="en">Book Copies Sold</p></div>
+      <div class="stat-box"><p class="stat-n">$250K+</p><p class="stat-l" data-lang="pt">Em Bolsas Conquistadas</p><p class="stat-l" data-lang="en">In Scholarships Won</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ METHOD ═══════════════════ -->
+<section id="method">
+  <div style="max-width:1050px;margin:0 auto;">
+    <div class="mth-head rv">
+      <span class="eyebrow" data-lang="pt">Nossa Metodologia</span>
+      <span class="eyebrow" data-lang="en">Our Framework</span>
+      <h2 class="h2">
+        <span data-lang="pt">O Método <em>Viamundi</em></span>
+        <span data-lang="en">The <em>Viamundi</em> Method</span>
+      </h2>
+      <p data-lang="pt">Um sistema proprietário de quatro fases para construir candidatos de classe mundial de dentro para fora.</p>
+      <p data-lang="en">A proprietary four-phase system designed to build world-class university candidates from the inside out.</p>
+    </div>
+    <div class="mth-grid">
+      <div class="mstep rv"><div class="mstep-dot">I</div><h3 class="mstep-title" data-lang="pt">Descobrir</h3><h3 class="mstep-title" data-lang="en">Discover</h3><p class="mstep-desc" data-lang="pt">Exploramos sua identidade, paixões e visão de longo prazo, revelando o núcleo autêntico da sua candidatura.</p><p class="mstep-desc" data-lang="en">We explore your identity, passions, and long-term vision, uncovering the authentic core of your candidacy.</p></div>
+      <div class="mstep rv d1"><div class="mstep-dot">II</div><h3 class="mstep-title" data-lang="pt">Planejar</h3><h3 class="mstep-title" data-lang="en">Design</h3><p class="mstep-desc" data-lang="pt">Arquitetamos sua estratégia completa, lista de universidades, cronograma de testes e roteiro extracurricular.</p><p class="mstep-desc" data-lang="en">We architect your complete strategy, university list, testing timeline, and extracurricular roadmap.</p></div>
+      <div class="mstep rv d2"><div class="mstep-dot">III</div><h3 class="mstep-title" data-lang="pt">Desenvolver</h3><h3 class="mstep-title" data-lang="en">Develop</h3><p class="mstep-desc" data-lang="pt">Executamos o plano, construindo seu perfil por meio de atividades estratégicas, narrativa e posicionamento acadêmico.</p><p class="mstep-desc" data-lang="en">We execute the plan, building your profile through strategic activities, narrative, and academic positioning.</p></div>
+      <div class="mstep rv d3"><div class="mstep-dot">IV</div><h3 class="mstep-title" data-lang="pt">Entregar</h3><h3 class="mstep-title" data-lang="en">Deliver</h3><p class="mstep-desc" data-lang="pt">Orientamos cada elemento da inscrição, dos essays às entrevistas e decisões finais, com precisão estratégica.</p><p class="mstep-desc" data-lang="en">We guide every application element, from essays and interviews to final decisions, with strategic precision.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section id="faq">
+  <div class="section-head rv">
+    <span class="eyebrow" data-lang="pt">Perguntas Frequentes</span>
+    <span class="eyebrow" data-lang="en">Frequently Asked Questions</span>
+    <h2 class="h2">
+      <span data-lang="pt">Suas <em>dúvidas</em>, respondidas</span>
+      <span data-lang="en">Your <em>questions</em>, answered</span>
+    </h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item rv">
+      <summary>
+        <span data-lang="pt">Quando devo começar o processo de admissão internacional?</span>
+        <span data-lang="en">When should I start the international admissions process?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-body">
+        <p data-lang="pt">O ideal é começar entre o 9º ano e o 1º ano do ensino médio. Isso dá tempo de construir um perfil consistente, preparar testes padronizados e desenvolver atividades extracurriculares com profundidade. Mesmo alunos no 3º ano ainda podem ser atendidos, a estratégia apenas se adapta ao tempo disponível.</p>
+        <p data-lang="en">Ideally between 9th and 10th grade. This gives time to build a consistent profile, prepare for standardized tests, and develop deep extracurricular activities. Students in their senior year can still be supported, the strategy simply adapts to the time available.</p>
+      </div>
+    </details>
+    <details class="faq-item rv d1">
+      <summary>
+        <span data-lang="pt">Preciso ser fluente em inglês para participar?</span>
+        <span data-lang="en">Do I need to be fluent in English to join?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-body">
+        <p data-lang="pt">Não no início. Trabalhamos com alunos em diferentes níveis e integramos a preparação linguística (TOEFL, IELTS, Duolingo) ao plano estratégico. Fluência é o destino, não o requisito de entrada.</p>
+        <p data-lang="en">Not at the start. We work with students at different levels and integrate language preparation (TOEFL, IELTS, Duolingo) into the strategic plan. Fluency is the destination, not the entry requirement.</p>
+      </div>
+    </details>
+    <details class="faq-item rv d2">
+      <summary>
+        <span data-lang="pt">A Viamundi ajuda com bolsas e auxílio financeiro?</span>
+        <span data-lang="en">Does Viamundi help with scholarships and financial aid?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-body">
+        <p data-lang="pt">Sim. Mapeamos universidades <em>need-blind</em>, <em>need-aware</em> e programas com bolsas de mérito, orientando cada etapa dos formulários financeiros (CSS Profile, ISFAA) para maximizar as chances de auxílio.</p>
+        <p data-lang="en">Yes. We map need-blind, need-aware universities and merit-based scholarship programs, guiding every step of the financial forms (CSS Profile, ISFAA) to maximize aid opportunities.</p>
+      </div>
+    </details>
+    <details class="faq-item rv d3">
+      <summary>
+        <span data-lang="pt">Vocês garantem aprovação em universidades específicas?</span>
+        <span data-lang="en">Do you guarantee admission to specific universities?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-body">
+        <p data-lang="pt">Nenhuma mentoria séria garante aprovação, decisões finais são das universidades. O que garantimos é um processo estratégico, personalizado e do mais alto padrão, maximizando suas chances reais em cada instituição da sua lista.</p>
+        <p data-lang="en">No serious mentorship can guarantee admission, final decisions belong to the universities. What we guarantee is a strategic, personalized, high-standard process that maximizes your real chances at every school on your list.</p>
+      </div>
+    </details>
+    <details class="faq-item rv d4">
+      <summary>
+        <span data-lang="pt">Como funciona a primeira conversa?</span>
+        <span data-lang="en">How does the first call work?</span>
+        <span class="faq-icon" aria-hidden="true">+</span>
+      </summary>
+      <div class="faq-body">
+        <p data-lang="pt">É uma conversa gratuita de 30 minutos, sem compromisso. Entendemos seu perfil, objetivos e cronograma, e apresentamos como podemos apoiar sua jornada. Se fizer sentido para ambos os lados, seguimos com um plano personalizado.</p>
+        <p data-lang="en">A free, no-commitment 30-minute call. We learn about your profile, goals, and timeline, and share how we can support your journey. If it feels right on both sides, we move forward with a personalized plan.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════════ CTA ═══════════════════ -->
+<section id="cta">
+  <div class="cta-globe-bg">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="95" stroke="#3BB2F6" stroke-width="0.5" fill="none"/>
+      <ellipse cx="100" cy="100" rx="40" ry="95" stroke="#3BB2F6" stroke-width="0.4" fill="none"/>
+      <ellipse cx="100" cy="100" rx="70" ry="95" stroke="#3BB2F6" stroke-width="0.3" fill="none"/>
+      <line x1="5" y1="100" x2="195" y2="100" stroke="#3BB2F6" stroke-width="0.5"/>
+      <line x1="5" y1="68"  x2="195" y2="68"  stroke="#3BB2F6" stroke-width="0.3"/>
+      <line x1="5" y1="132" x2="195" y2="132" stroke="#3BB2F6" stroke-width="0.3"/>
+    </svg>
+  </div>
+  <div class="cta-box">
+    <div class="cta-pill rv">
+      <div class="cta-dot"></div>
+      <span class="cta-pill-txt" data-lang="pt">Vagas Limitadas · Ciclo 2026</span>
+      <span class="cta-pill-txt" data-lang="en">Limited Spots · 2026 Cycle</span>
+    </div>
+    <h2 class="cta-h2 rv d1">
+      <span data-lang="pt">Descubra seu Potencial.<br><em>Escolha seu Caminho.</em></span>
+      <span data-lang="en">Discover Your Potential.<br><em>Choose Your Path.</em></span>
+    </h2>
+    <p class="cta-script rv d1" data-lang="pt">O mundo é grande. Você pode ir além.</p>
+    <p class="cta-script rv d1" data-lang="en">The world is big. You can go further.</p>
+    <p class="cta-p rv d2">
+      <span data-lang="pt">Aceitamos um número reduzido de estudantes por ciclo para garantir que cada processo receba toda a profundidade da nossa atenção estratégica.</span>
+      <span data-lang="en">We accept a small number of students per cycle to ensure every engagement receives the full depth of our strategic focus.</span>
+    </p>
+    <div class="cta-btns rv d3">
+      <a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" class="btn-gold" data-lang="pt">Agende Sua Chamada Gratuita</a>
+      <a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" class="btn-gold" data-lang="en">Book Your Free Strategy Call</a>
+      <a href="/contato" class="btn-outline" data-lang="pt">Falar no WhatsApp</a>
+      <a href="/contato" class="btn-outline" data-lang="en">Chat on WhatsApp</a>
+      <a href="#services" class="btn-outline" data-lang="pt">Explorar Serviços</a>
+      <a href="#services" class="btn-outline" data-lang="en">Explore Services</a>
+    </div>
+    <p class="cta-note rv d4">
+      <span data-lang="pt">Consulta gratuita de 30 minutos · Sem compromisso · Estudantes globais são bem-vindos</span>
+      <span data-lang="en">Free 30-minute consultation · No commitment required · Global students welcome</span>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+
+<footer>
+  <div class="foot-in">
+    <div class="foot-col foot-brand">
+      <p class="foot-name">VIA<span>MUNDI</span></p>
+      <p class="foot-tagline" data-lang="pt">O Caminho para o Extraordinário</p>
+      <p class="foot-tagline" data-lang="en">The Path to the Extraordinary</p>
+      <p class="foot-desc" data-lang="pt">Mentoria estratégica de admissões internacionais para estudantes que buscam as melhores universidades dos EUA e Europa.</p>
+      <p class="foot-desc" data-lang="en">Strategic admissions mentorship for students aiming at the top universities in the US and Europe.</p>
+    </div>
+    <div class="foot-col">
+      <h5 data-lang="pt">Navegar</h5><h5 data-lang="en">Explore</h5>
+      <ul>
+        <li><a href="#team"       data-lang="pt">A Equipe</a><a href="#team"       data-lang="en">The Team</a></li>
+        <li><a href="#promessa"   data-lang="pt">Sobre</a><a href="#promessa"   data-lang="en">About</a></li>
+        <li><a href="#admissions" data-lang="pt">Aprovações</a><a href="#admissions" data-lang="en">Admissions</a></li>
+        <li><a href="#services"   data-lang="pt">Serviços</a><a href="#services"   data-lang="en">Services</a></li>
+        <li><a href="#method"     data-lang="pt">Metodologia</a><a href="#method"     data-lang="en">Method</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5 data-lang="pt">Começar</h5><h5 data-lang="en">Get Started</h5>
+      <ul>
+        <li><a href="/contato" data-lang="pt">Contato · WhatsApp</a><a href="/contato" data-lang="en">Contact · WhatsApp</a></li>
+        <li><a href="/blog" data-lang="pt">Blog</a><a href="/blog" data-lang="en">Blog</a></li>
+        <li><a href="/oportunidades" data-lang="pt">Oportunidades</a><a href="/oportunidades" data-lang="en">Opportunities</a></li>
+        <li><a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" data-lang="pt">Agendar Conversa</a><a href="https://calendar.app.google/noVFMsnWXnxQdywp9" target="_blank" rel="noopener" data-lang="en">Book a Call</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h5 data-lang="pt">Conecte-se</h5><h5 data-lang="en">Connect</h5>
+      <ul>
+        <li><a href="https://www.instagram.com/viamundieducation/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.youtube.com/@viamundieducation" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="mailto:contatojuliatomasi@gmail.com">contatojuliatomasi@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Viamundi. <span data-lang="pt">Todos os direitos reservados.</span><span data-lang="en">All rights reserved.</span></span>
+    <a href="/privacidade" class="foot-legal" data-lang="pt">Política de Privacidade</a><a href="/privacidade" class="foot-legal" data-lang="en">Privacy Policy</a>
+    <span data-lang="pt">Feito com cuidado para estudantes globais.</span>
+    <span data-lang="en">Crafted with care for global students.</span>
+  </div>
+</footer>
+<a href="/contato" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.5.7 4.8 2 6.8L3.2 29l6.8-2c1.9 1.1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4 1.2 1.2-3.9-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6 0-5.8 4.8-10.5 10.6-10.5s10.6 4.7 10.6 10.5S21.8 26.1 16 26.1zm5.8-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.1 1.4 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg>
+</a>
+<script type="module" src="/src/landing/landing.ts"></script>
+</body>
+</html>
