@@ -47,6 +47,13 @@ npm test                       # unit tests
 npm run test:integration       # Stripe webhook against local Supabase (needs SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY)
 ```
 
+## Environments
+
+| | Supabase project | Status |
+|---|---|---|
+| Production | `viamundi` (ref `jkzqogczruvfyokrxkqn`, us-east-1) | Migrations applied 2026-11-19; auth settings still to do (step 1 below) |
+| Local | `supabase start` | Same migrations |
+
 ## Go-live checklist
 
 1. **Supabase project** (one for staging, one for production): run `supabase link` then

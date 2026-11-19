@@ -1,4 +1,4 @@
--- Via Mundi Education — core schema (PROPOSAL, not yet applied)
+-- Via Mundi Education — core schema (applied to project "viamundi" on 2026-11-19)
 -- Tables: editors, profiles, programs, posts, leads, orders
 -- Principle: anon can read published content + create leads. Everything else
 -- is editor-only, and payment state is written ONLY by the service role
@@ -20,7 +20,7 @@ create type public.pay_method    as enum ('stripe', 'venmo_manual');
 -- editors: allowlist. Only emails here can use /editor. Seeded by hand.
 -- ---------------------------------------------------------------------------
 create table public.editors (
-  email       citext primary key,
+  email       extensions.citext primary key,
   display_name text not null,
   advisor     public.advisor_key,
   created_at  timestamptz not null default now()
@@ -124,7 +124,7 @@ create index posts_search_idx   on public.posts using gin (search);
 create table public.leads (
   id                uuid primary key default gen_random_uuid(),
   full_name         text not null check (char_length(full_name) between 2 and 120),
-  email             citext check (email is null or email ~* '^[^@\s]+@[^@\s]+\.[^@\s]+$'),
+  email             extensions.citext check (email is null or email ~* '^[^@\s]+@[^@\s]+\.[^@\s]+$'),
   phone_e164        text check (phone_e164 is null or phone_e164 ~ '^\+[1-9][0-9]{7,14}$'),
   program_interest  text check (char_length(program_interest) <= 120),
   message           text check (char_length(message) <= 2000),
@@ -165,7 +165,7 @@ create table public.orders (
   id                         uuid primary key default gen_random_uuid(),
   program_id                 uuid not null references public.programs(id),
   lead_id                    uuid references public.leads(id) on delete set null,
-  customer_email             citext not null,
+  customer_email             extensions.citext not null,
   customer_name              text,
   amount_cents               integer not null check (amount_cents > 0),
   currency                   text not null,
@@ -174,7 +174,7 @@ create table public.orders (
   stripe_checkout_session_id text unique,
   stripe_payment_intent_id   text unique,
   venmo_reference            text,         -- manual P2P: note/txn id the editor verified
-  verified_by                citext references public.editors(email),
+  verified_by                extensions.citext references public.editors(email),
   paid_at                    timestamptz,
   created_at                 timestamptz not null default now(),
   updated_at                 timestamptz not null default now()
