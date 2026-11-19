@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { coverUrl, supabase } from "../lib/supabase";
+import { coverUrl, supabase, supabaseConfigured } from "../lib/supabase";
 import { formatDate } from "../lib/content";
 import { useDocumentTitle, useLang, useT } from "../lib/i18n";
 
@@ -49,7 +49,7 @@ export function BlogIndex() {
     if (q.trim()) query = query.textSearch("search", q.trim(), { type: "websearch", config: "simple" });
     query.then(({ data, error }) => {
       if (cancelled) return;
-      setFailed(Boolean(error));
+      setFailed(Boolean(error) && supabaseConfigured);
       setPosts((data as PostCard[]) ?? []);
     });
     return () => {
