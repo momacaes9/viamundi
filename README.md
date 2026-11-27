@@ -74,3 +74,5 @@ npm run test:integration       # Stripe webhook against local Supabase (needs SU
 5. Have a lawyer review `/privacidade` before launch.
 
 More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
+
+Free guide for Brazilian applicants (PT/EN): [docs/guia-estudar-fora](docs/guia-estudar-fora/README.md).

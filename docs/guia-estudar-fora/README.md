@@ -49,6 +49,12 @@ A free, bilingual (PT/EN) roadmap for Brazilian high schoolers applying to US un
 - [Schoolhouse.world — free SAT tutoring](https://schoolhouse.world)
 - ViaMundi Education — international admissions mentorship
 
+## Modelo de lista / School list template
+
+Copie [lista-universidades.csv](lista-universidades.csv) para o Google Sheets ou Excel e preencha uma linha por universidade.
+
+*EN: Copy the CSV into Google Sheets or Excel, one row per school.*
+
 ## Checklist
 
 - [ ] 10–15 school list
